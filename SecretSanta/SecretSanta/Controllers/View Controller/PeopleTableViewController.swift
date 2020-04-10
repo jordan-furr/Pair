@@ -10,30 +10,33 @@ import UIKit
 
 class PeopleTableViewController: UITableViewController {
     
+    var peopleArray = [Person]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        randomTapped(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        randomTapped(true)
     }
 
-    //add button tapped
-    
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+       1
     }
 
+    func getnumGroups() -> Int {
+         let count = PersonController.shared.people.count
+               return Int(ceil(Double(count)/2.0))
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return PersonController.shared.people.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-
+        
         let person = PersonController.shared.people[indexPath.row]
         cell.textLabel?.text = person.name
         return cell
@@ -41,9 +44,9 @@ class PeopleTableViewController: UITableViewController {
     
     //MARK: - Helpers
     @IBAction func randomTapped(_ sender: Any) {
+       // peopleArray = PersonController.shared.people
+        //peopleArray = peopleArray.shuffled()
         print("random tapped!")
-        
-        
         tableView.reloadData()
     }
     
@@ -77,4 +80,15 @@ class PeopleTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
+    
+    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+           switch(section){
+           case 0:
+               return "Group \(1)"
+           default:
+               return "Group \(section + 1)"
+           }
+       }
+    */
 }

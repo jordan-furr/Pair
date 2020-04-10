@@ -13,6 +13,7 @@ class PersonController {
     
     static let shared = PersonController()
     
+    
     var people: [Person] {
         get {let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
             return (try? CoreDataStack.context.fetch(fetchRequest)) ?? []}
@@ -24,12 +25,8 @@ class PersonController {
         saveToPersistenceStore()
     }
     
-    func deletePerson(person: Person) {
-        CoreDataStack.context.delete(person)
-        saveToPersistenceStore()
-    }
-    
-    func randomizePairs(){
+    /*
+    func randomize(){
         let numGroups = Int(ceil(Double(people.count)/2.0))
         var newPpl: [Person] = []
         for i in 0..<numGroups {
@@ -43,6 +40,12 @@ class PersonController {
             newPpl.append(partner)
         }
         people = newPpl
+        saveToPersistenceStore()
+    }
+ */
+    
+    func deletePerson(person: Person) {
+        CoreDataStack.context.delete(person)
         saveToPersistenceStore()
     }
     
