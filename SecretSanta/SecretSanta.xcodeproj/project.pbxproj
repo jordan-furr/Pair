@@ -17,7 +17,6 @@
 		C55514372440C87F008CE41B /* Person+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55514362440C87F008CE41B /* Person+Convenience.swift */; };
 		C55514392440C88F008CE41B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55514382440C88F008CE41B /* CoreDataStack.swift */; };
 		C555143C2440C8C9008CE41B /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555143B2440C8C8008CE41B /* PeopleTableViewController.swift */; };
-		C555143E2440C8DE008CE41B /* PairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555143D2440C8DE008CE41B /* PairTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		C55514362440C87F008CE41B /* Person+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Convenience.swift"; sourceTree = "<group>"; };
 		C55514382440C88F008CE41B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C555143B2440C8C8008CE41B /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
-		C555143D2440C8DE008CE41B /* PairTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				C555143B2440C8C8008CE41B /* PeopleTableViewController.swift */,
-				C555143D2440C8DE008CE41B /* PairTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -201,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C555143E2440C8DE008CE41B /* PairTableViewController.swift in Sources */,
 				C55514392440C88F008CE41B /* CoreDataStack.swift in Sources */,
 				C55514252440C481008CE41B /* SecretSanta.xcdatamodeld in Sources */,
 				C555141B2440C481008CE41B /* AppDelegate.swift in Sources */,
