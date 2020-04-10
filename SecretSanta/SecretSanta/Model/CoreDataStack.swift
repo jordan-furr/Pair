@@ -11,17 +11,15 @@ import CoreData
 
 enum CoreDataStack {
     static let container: NSPersistentContainer = {
-       let container = NSPersistentContainer(name: "SecretSanta")
-        container.loadPersistentStores { (_, error) in
-            if let error = error {
-            fatalError("Failed to load persistent stores \(error)")
+        let appName = Bundle.main.object(forInfoDictionaryKey: (kCFBundleNameKey as String)) as! String
+        let container = NSPersistentContainer(name: appName)
+        container.loadPersistentStores() { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         }
         return container
     }()
-    
-    //saves hassle of writing container.viewContext
-    static var context: NSManagedObjectContext {
-        return container.viewContext
-    }
+    static var context: NSManagedObjectContext { return container.viewContext }
 }
+

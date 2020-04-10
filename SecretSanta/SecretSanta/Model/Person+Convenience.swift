@@ -12,10 +12,9 @@ import CoreData
 extension Person {
     
     @discardableResult
-    convenience init(name: String, isIncluded: Bool, hasPartner: Bool, moc: NSManagedObjectContext = CoreDataStack.context){
+    convenience init(name: String, moc: NSManagedObjectContext = CoreDataStack.context){
         self.init(context: moc)
         self.name = name
-        self.isIncluded = isIncluded
-        self.hasPartner = hasPartner
+        self.groupIndex = "1"
     }
 }
