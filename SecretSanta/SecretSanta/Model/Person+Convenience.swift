@@ -15,6 +15,5 @@ extension Person {
     convenience init(name: String, moc: NSManagedObjectContext = CoreDataStack.context){
         self.init(context: moc)
         self.name = name
-        self.groupIndex = "1"
     }
 }

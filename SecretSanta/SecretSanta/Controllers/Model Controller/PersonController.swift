@@ -17,7 +17,6 @@ class PersonController {
     var people: [Person] {
         get {let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
             return (try? CoreDataStack.context.fetch(fetchRequest)) ?? []}
-        set {}
     }
     
     func createPerson(name: String) {
